@@ -1,0 +1,10 @@
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\bin\Debug\ToDo-List.exe.config
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\bin\Debug\ToDo-List.exe
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\bin\Debug\ToDo-List.pdb
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo_List.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.exe
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.pdb

@@ -1,0 +1,6 @@
+C:\Users\Usuario\Documents\GitHub\ToDo-List\TransferObject_Layer\bin\Debug\TransferObject_Layer.dll
+C:\Users\Usuario\Documents\GitHub\ToDo-List\TransferObject_Layer\bin\Debug\TransferObject_Layer.pdb
+C:\Users\Usuario\Documents\GitHub\ToDo-List\TransferObject_Layer\obj\Debug\TransferObject_Layer.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\ToDo-List\TransferObject_Layer\obj\Debug\TransferObject_Layer.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\ToDo-List\TransferObject_Layer\obj\Debug\TransferObject_Layer.dll
+C:\Users\Usuario\Documents\GitHub\ToDo-List\TransferObject_Layer\obj\Debug\TransferObject_Layer.pdb
