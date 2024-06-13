@@ -8,3 +8,4 @@ C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.csproj
 C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.exe
 C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo-List.pdb
+C:\Users\Usuario\Documents\GitHub\ToDo-List\ToDo-List\obj\Debug\ToDo_List.Form_TodoList.resources

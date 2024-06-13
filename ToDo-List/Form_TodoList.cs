@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ToDo_List
 {
-    public partial class Form1 : Form
+    public partial class Form_TodoList : Form
     {
-        public Form1()
+        public Form_TodoList()
         {
             InitializeComponent();
+        }
+
+        private void Form_TodoList_Load(object sender, EventArgs e)
+        {
+            cb_Priority.SelectedIndex = 0;
         }
     }
 }
