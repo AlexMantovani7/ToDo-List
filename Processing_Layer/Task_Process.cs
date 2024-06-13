@@ -17,14 +17,15 @@ namespace Processing_Layer
 
                 acessoDados.AddParameter("@var_operation", operation);
 
-                acessoDados.AddParameter("@var_code", task_Object.code);
+                acessoDados.AddParameter("@var_codeTask", task_Object.code);
                 acessoDados.AddParameter("@var_priority", task_Object.priority);
-                acessoDados.AddParameter("@var_description", task_Object.description);
+                acessoDados.AddParameter("@var_descriptionTask", task_Object.description);
+                acessoDados.AddParameter("@var_detailsTask", task_Object.detailsTask);
                 acessoDados.AddParameter("@var_initial_date", task_Object.initial_date);
                 acessoDados.AddParameter("@var_final_date", task_Object.final_date);
                 acessoDados.AddParameter("@var_task_progress", task_Object.task_progress);
 
-                return acessoDados.RunScalar("sp_ManageField",
+                return acessoDados.RunScalar("sp_ManageTask",
                     CommandType.StoredProcedure).ToString();
             }
             catch (Exception)
@@ -41,9 +42,10 @@ namespace Processing_Layer
 
                 acessoDados.AddParameter("@var_searchAll", searchAll);
 
-                acessoDados.AddParameter("@var_code", task_Object.code);
+                acessoDados.AddParameter("@var_codeTask", task_Object.code);
                 acessoDados.AddParameter("@var_priority", task_Object.priority);
-                acessoDados.AddParameter("@var_description", task_Object.description);
+                acessoDados.AddParameter("@var_descriptionTask", task_Object.description);
+                acessoDados.AddParameter("@var_detailsTask", task_Object.detailsTask);
                 acessoDados.AddParameter("@var_initial_date", task_Object.initial_date);
                 acessoDados.AddParameter("@var_final_date", task_Object.final_date);
                 acessoDados.AddParameter("@var_task_progress", task_Object.task_progress);
@@ -56,9 +58,10 @@ namespace Processing_Layer
                 {
                     task_Object = new Task_Object()
                     {
-                        code = Convert.ToInt32(dataRow["code"]),
+                        code = Convert.ToInt32(dataRow["codeTask"]),
                         priority = dataRow["priority"].ToString(),
-                        description = dataRow["description"].ToString(),
+                        description = dataRow["descriptionTask"].ToString(),
+                        detailsTask = dataRow["detailsTask"].ToString(),
                         initial_date = Convert.ToDateTime(dataRow["initial_date"]),
                         final_date = Convert.ToDateTime(dataRow["final_date"]),
                         task_progress = dataRow["task_progress"].ToString()

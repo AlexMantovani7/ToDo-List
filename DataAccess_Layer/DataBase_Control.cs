@@ -30,7 +30,7 @@ namespace DataAccess_Layer
         {
             try
             {
-                return new MySqlConnection($"server=127.0.0.1" + "; database=dataBaseTodoList" + "; Uid=root" + "; pwd=todoList" + ";");
+                return new MySqlConnection($"server=127.0.0.1" + "; database=todoList" + "; Uid=root" + "; pwd=todoList" + ";");
             }
             catch (Exception exception)
             {
