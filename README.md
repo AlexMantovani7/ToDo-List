@@ -1,5 +1,4 @@
 # ToDo-List
-<<<<<<< HEAD
 ---------- O Projeto ------------------------------
  Um projeto redigido em C# através do Visual Studio e MySql, o projeto tem como objetivo Criar, Testar e Manter uma ToDo List que gerenciará as tarefas e deadlines do Usuário.
 
@@ -25,6 +24,3 @@ Os sistemas de pesquisa são muito práticos com Calendario retrateis para facil
 
 ---------- Agradecimentos ------------------------
 Muito obrigado pela oportunidade e também por ter a chance de desenvolver mais um sistema que é sempre muito bem vindo.
-=======
- Um projeto redigido em C# e NoSql através do Visual Studio, o projeto tem como objetivo Criar, Testar e Manter uma ToDo List que gerenciará as tarefas e deadlines do Usuário.
->>>>>>> parent of a2c867d (Ultimas Finalizações do Projeto)

@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SearchingTask));
             this.mc_Calender = new System.Windows.Forms.MonthCalendar();
             this.tcp_Description = new System.Windows.Forms.TabPage();
             this.txtb_Description = new System.Windows.Forms.TextBox();
             this.lb_Description = new System.Windows.Forms.Label();
-            this.btn_SearchingDescription = new System.Windows.Forms.Button();
             this.tcp_Priority = new System.Windows.Forms.TabPage();
             this.cb_Priority = new System.Windows.Forms.ComboBox();
             this.lb_Priority = new System.Windows.Forms.Label();
-            this.btn_SearchingPriority = new System.Windows.Forms.Button();
             this.tcp_TaskProgress = new System.Windows.Forms.TabPage();
             this.cb_TaskProgress = new System.Windows.Forms.ComboBox();
             this.lb_TaskProgress = new System.Windows.Forms.Label();
-            this.btn_SearchingTaskProgress = new System.Windows.Forms.Button();
             this.tcp_DatesTask = new System.Windows.Forms.TabPage();
-            this.btn_CloseCalender_FinalDate = new System.Windows.Forms.Button();
-            this.btn_CloseCalender_InitialDate = new System.Windows.Forms.Button();
-            this.btn_OpenCalender_InitialDate = new System.Windows.Forms.Button();
-            this.btn_OpenCalender_FinalDate = new System.Windows.Forms.Button();
             this.mtxtb_FinalDate = new System.Windows.Forms.MaskedTextBox();
             this.lb_FinalDate = new System.Windows.Forms.Label();
             this.mtxtb_IniticalDate = new System.Windows.Forms.MaskedTextBox();
             this.lb_TaskDates = new System.Windows.Forms.Label();
-            this.btn_SearchingDate = new System.Windows.Forms.Button();
             this.tcp_Code = new System.Windows.Forms.TabPage();
             this.txtb_Code = new System.Windows.Forms.TextBox();
             this.lb_Code = new System.Windows.Forms.Label();
-            this.btn_SearchingCode = new System.Windows.Forms.Button();
             this.tc_Search = new System.Windows.Forms.TabControl();
+            this.btn_SearchingCode = new System.Windows.Forms.Button();
+            this.btn_CloseCalender_FinalDate = new System.Windows.Forms.Button();
+            this.btn_CloseCalender_InitialDate = new System.Windows.Forms.Button();
+            this.btn_OpenCalender_InitialDate = new System.Windows.Forms.Button();
+            this.btn_OpenCalender_FinalDate = new System.Windows.Forms.Button();
+            this.btn_SearchingDate = new System.Windows.Forms.Button();
+            this.btn_SearchingTaskProgress = new System.Windows.Forms.Button();
+            this.btn_SearchingPriority = new System.Windows.Forms.Button();
+            this.btn_SearchingDescription = new System.Windows.Forms.Button();
             this.tcp_Description.SuspendLayout();
             this.tcp_Priority.SuspendLayout();
             this.tcp_TaskProgress.SuspendLayout();
@@ -112,25 +113,6 @@
             this.lb_Description.TabIndex = 55;
             this.lb_Description.Text = "DESCRIÇÃO :";
             // 
-            // btn_SearchingDescription
-            // 
-            this.btn_SearchingDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_SearchingDescription.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_SearchingDescription.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_SearchingDescription.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_SearchingDescription.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_SearchingDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SearchingDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SearchingDescription.Image = global::ToDo_List.Properties.Resources.Apply;
-            this.btn_SearchingDescription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SearchingDescription.Location = new System.Drawing.Point(560, 7);
-            this.btn_SearchingDescription.Name = "btn_SearchingDescription";
-            this.btn_SearchingDescription.Size = new System.Drawing.Size(173, 59);
-            this.btn_SearchingDescription.TabIndex = 11;
-            this.btn_SearchingDescription.Text = "      PESQUISAR";
-            this.btn_SearchingDescription.UseVisualStyleBackColor = false;
-            this.btn_SearchingDescription.Click += new System.EventHandler(this.btn_SearchingDescription_Click);
-            // 
             // tcp_Priority
             // 
             this.tcp_Priority.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -169,25 +151,6 @@
             this.lb_Priority.Size = new System.Drawing.Size(119, 18);
             this.lb_Priority.TabIndex = 58;
             this.lb_Priority.Text = "PRIORIDADE :";
-            // 
-            // btn_SearchingPriority
-            // 
-            this.btn_SearchingPriority.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_SearchingPriority.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_SearchingPriority.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_SearchingPriority.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_SearchingPriority.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_SearchingPriority.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SearchingPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SearchingPriority.Image = global::ToDo_List.Properties.Resources.Apply;
-            this.btn_SearchingPriority.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SearchingPriority.Location = new System.Drawing.Point(560, 7);
-            this.btn_SearchingPriority.Name = "btn_SearchingPriority";
-            this.btn_SearchingPriority.Size = new System.Drawing.Size(173, 59);
-            this.btn_SearchingPriority.TabIndex = 9;
-            this.btn_SearchingPriority.Text = "      PESQUISAR";
-            this.btn_SearchingPriority.UseVisualStyleBackColor = false;
-            this.btn_SearchingPriority.Click += new System.EventHandler(this.btn_SearchingPriority_Click);
             // 
             // tcp_TaskProgress
             // 
@@ -230,25 +193,6 @@
             this.lb_TaskProgress.TabIndex = 58;
             this.lb_TaskProgress.Text = "PROGRESSO :";
             // 
-            // btn_SearchingTaskProgress
-            // 
-            this.btn_SearchingTaskProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_SearchingTaskProgress.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_SearchingTaskProgress.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_SearchingTaskProgress.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_SearchingTaskProgress.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_SearchingTaskProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SearchingTaskProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SearchingTaskProgress.Image = global::ToDo_List.Properties.Resources.Apply;
-            this.btn_SearchingTaskProgress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SearchingTaskProgress.Location = new System.Drawing.Point(560, 7);
-            this.btn_SearchingTaskProgress.Name = "btn_SearchingTaskProgress";
-            this.btn_SearchingTaskProgress.Size = new System.Drawing.Size(173, 59);
-            this.btn_SearchingTaskProgress.TabIndex = 7;
-            this.btn_SearchingTaskProgress.Text = "      PESQUISAR";
-            this.btn_SearchingTaskProgress.UseVisualStyleBackColor = false;
-            this.btn_SearchingTaskProgress.Click += new System.EventHandler(this.btn_SearchingTaskProgress_Click);
-            // 
             // tcp_DatesTask
             // 
             this.tcp_DatesTask.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -267,6 +211,133 @@
             this.tcp_DatesTask.Size = new System.Drawing.Size(742, 76);
             this.tcp_DatesTask.TabIndex = 13;
             this.tcp_DatesTask.Text = "DATAS TAREFA";
+            // 
+            // mtxtb_FinalDate
+            // 
+            this.mtxtb_FinalDate.BackColor = System.Drawing.Color.White;
+            this.mtxtb_FinalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtb_FinalDate.Location = new System.Drawing.Point(375, 26);
+            this.mtxtb_FinalDate.Mask = "00/00/0000";
+            this.mtxtb_FinalDate.Name = "mtxtb_FinalDate";
+            this.mtxtb_FinalDate.RejectInputOnFirstFailure = true;
+            this.mtxtb_FinalDate.Size = new System.Drawing.Size(86, 26);
+            this.mtxtb_FinalDate.TabIndex = 4;
+            this.mtxtb_FinalDate.TabStop = false;
+            this.mtxtb_FinalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtxtb_FinalDate.ValidatingType = typeof(System.DateTime);
+            this.mtxtb_FinalDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtb_FinalDate_KeyPress);
+            // 
+            // lb_FinalDate
+            // 
+            this.lb_FinalDate.AutoSize = true;
+            this.lb_FinalDate.BackColor = System.Drawing.Color.Transparent;
+            this.lb_FinalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_FinalDate.Location = new System.Drawing.Point(315, 30);
+            this.lb_FinalDate.Name = "lb_FinalDate";
+            this.lb_FinalDate.Size = new System.Drawing.Size(58, 18);
+            this.lb_FinalDate.TabIndex = 64;
+            this.lb_FinalDate.Text = "FINAL:";
+            // 
+            // mtxtb_IniticalDate
+            // 
+            this.mtxtb_IniticalDate.BackColor = System.Drawing.Color.White;
+            this.mtxtb_IniticalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtb_IniticalDate.Location = new System.Drawing.Point(146, 26);
+            this.mtxtb_IniticalDate.Mask = "00/00/0000";
+            this.mtxtb_IniticalDate.Name = "mtxtb_IniticalDate";
+            this.mtxtb_IniticalDate.RejectInputOnFirstFailure = true;
+            this.mtxtb_IniticalDate.Size = new System.Drawing.Size(86, 26);
+            this.mtxtb_IniticalDate.TabIndex = 3;
+            this.mtxtb_IniticalDate.TabStop = false;
+            this.mtxtb_IniticalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtxtb_IniticalDate.ValidatingType = typeof(System.DateTime);
+            this.mtxtb_IniticalDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtb_IniticalDate_KeyPress);
+            // 
+            // lb_TaskDates
+            // 
+            this.lb_TaskDates.AutoSize = true;
+            this.lb_TaskDates.BackColor = System.Drawing.Color.Transparent;
+            this.lb_TaskDates.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TaskDates.Location = new System.Drawing.Point(3, 30);
+            this.lb_TaskDates.Name = "lb_TaskDates";
+            this.lb_TaskDates.Size = new System.Drawing.Size(141, 18);
+            this.lb_TaskDates.TabIndex = 61;
+            this.lb_TaskDates.Text = "DATAS    INICIAL:";
+            // 
+            // tcp_Code
+            // 
+            this.tcp_Code.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tcp_Code.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tcp_Code.Controls.Add(this.txtb_Code);
+            this.tcp_Code.Controls.Add(this.lb_Code);
+            this.tcp_Code.Controls.Add(this.btn_SearchingCode);
+            this.tcp_Code.Location = new System.Drawing.Point(4, 4);
+            this.tcp_Code.Name = "tcp_Code";
+            this.tcp_Code.Padding = new System.Windows.Forms.Padding(3);
+            this.tcp_Code.Size = new System.Drawing.Size(742, 76);
+            this.tcp_Code.TabIndex = 0;
+            this.tcp_Code.Text = "CÓDIGO";
+            // 
+            // txtb_Code
+            // 
+            this.txtb_Code.BackColor = System.Drawing.Color.White;
+            this.txtb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtb_Code.Location = new System.Drawing.Point(89, 26);
+            this.txtb_Code.Name = "txtb_Code";
+            this.txtb_Code.Size = new System.Drawing.Size(465, 26);
+            this.txtb_Code.TabIndex = 1;
+            this.txtb_Code.WordWrap = false;
+            this.txtb_Code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtb_Code_KeyPress);
+            // 
+            // lb_Code
+            // 
+            this.lb_Code.AutoSize = true;
+            this.lb_Code.BackColor = System.Drawing.Color.Transparent;
+            this.lb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Code.Location = new System.Drawing.Point(2, 30);
+            this.lb_Code.Name = "lb_Code";
+            this.lb_Code.Size = new System.Drawing.Size(85, 18);
+            this.lb_Code.TabIndex = 52;
+            this.lb_Code.Text = "CÓDIGO :";
+            // 
+            // tc_Search
+            // 
+            this.tc_Search.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tc_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tc_Search.Controls.Add(this.tcp_Code);
+            this.tc_Search.Controls.Add(this.tcp_DatesTask);
+            this.tc_Search.Controls.Add(this.tcp_TaskProgress);
+            this.tc_Search.Controls.Add(this.tcp_Priority);
+            this.tc_Search.Controls.Add(this.tcp_Description);
+            this.tc_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tc_Search.HotTrack = true;
+            this.tc_Search.Location = new System.Drawing.Point(-1, 1);
+            this.tc_Search.Name = "tc_Search";
+            this.tc_Search.SelectedIndex = 0;
+            this.tc_Search.Size = new System.Drawing.Size(750, 105);
+            this.tc_Search.TabIndex = 17;
+            this.tc_Search.TabStop = false;
+            this.tc_Search.SelectedIndexChanged += new System.EventHandler(this.tc_Search_SelectedIndexChanged);
+            // 
+            // btn_SearchingCode
+            // 
+            this.btn_SearchingCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_SearchingCode.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_SearchingCode.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_SearchingCode.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_SearchingCode.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_SearchingCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchingCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SearchingCode.Image = global::ToDo_List.Properties.Resources.Apply;
+            this.btn_SearchingCode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SearchingCode.Location = new System.Drawing.Point(560, 7);
+            this.btn_SearchingCode.Name = "btn_SearchingCode";
+            this.btn_SearchingCode.Size = new System.Drawing.Size(173, 59);
+            this.btn_SearchingCode.TabIndex = 2;
+            this.btn_SearchingCode.Text = "      PESQUISAR";
+            this.btn_SearchingCode.UseVisualStyleBackColor = false;
+            this.btn_SearchingCode.Click += new System.EventHandler(this.btn_SearchingCode_Click);
             // 
             // btn_CloseCalender_FinalDate
             // 
@@ -338,58 +409,6 @@
             this.btn_OpenCalender_FinalDate.UseVisualStyleBackColor = false;
             this.btn_OpenCalender_FinalDate.Click += new System.EventHandler(this.btn_OpenCalender_FinalDate_Click);
             // 
-            // mtxtb_FinalDate
-            // 
-            this.mtxtb_FinalDate.BackColor = System.Drawing.Color.White;
-            this.mtxtb_FinalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtb_FinalDate.Location = new System.Drawing.Point(375, 26);
-            this.mtxtb_FinalDate.Mask = "00/00/0000";
-            this.mtxtb_FinalDate.Name = "mtxtb_FinalDate";
-            this.mtxtb_FinalDate.RejectInputOnFirstFailure = true;
-            this.mtxtb_FinalDate.Size = new System.Drawing.Size(86, 26);
-            this.mtxtb_FinalDate.TabIndex = 4;
-            this.mtxtb_FinalDate.TabStop = false;
-            this.mtxtb_FinalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtxtb_FinalDate.ValidatingType = typeof(System.DateTime);
-            this.mtxtb_FinalDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtb_FinalDate_KeyPress);
-            // 
-            // lb_FinalDate
-            // 
-            this.lb_FinalDate.AutoSize = true;
-            this.lb_FinalDate.BackColor = System.Drawing.Color.Transparent;
-            this.lb_FinalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_FinalDate.Location = new System.Drawing.Point(315, 30);
-            this.lb_FinalDate.Name = "lb_FinalDate";
-            this.lb_FinalDate.Size = new System.Drawing.Size(58, 18);
-            this.lb_FinalDate.TabIndex = 64;
-            this.lb_FinalDate.Text = "FINAL:";
-            // 
-            // mtxtb_IniticalDate
-            // 
-            this.mtxtb_IniticalDate.BackColor = System.Drawing.Color.White;
-            this.mtxtb_IniticalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtb_IniticalDate.Location = new System.Drawing.Point(146, 26);
-            this.mtxtb_IniticalDate.Mask = "00/00/0000";
-            this.mtxtb_IniticalDate.Name = "mtxtb_IniticalDate";
-            this.mtxtb_IniticalDate.RejectInputOnFirstFailure = true;
-            this.mtxtb_IniticalDate.Size = new System.Drawing.Size(86, 26);
-            this.mtxtb_IniticalDate.TabIndex = 3;
-            this.mtxtb_IniticalDate.TabStop = false;
-            this.mtxtb_IniticalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtxtb_IniticalDate.ValidatingType = typeof(System.DateTime);
-            this.mtxtb_IniticalDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtb_IniticalDate_KeyPress);
-            // 
-            // lb_TaskDates
-            // 
-            this.lb_TaskDates.AutoSize = true;
-            this.lb_TaskDates.BackColor = System.Drawing.Color.Transparent;
-            this.lb_TaskDates.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TaskDates.Location = new System.Drawing.Point(3, 30);
-            this.lb_TaskDates.Name = "lb_TaskDates";
-            this.lb_TaskDates.Size = new System.Drawing.Size(141, 18);
-            this.lb_TaskDates.TabIndex = 61;
-            this.lb_TaskDates.Text = "DATAS    INICIAL:";
-            // 
             // btn_SearchingDate
             // 
             this.btn_SearchingDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -409,80 +428,62 @@
             this.btn_SearchingDate.UseVisualStyleBackColor = false;
             this.btn_SearchingDate.Click += new System.EventHandler(this.btn_SearchingDate_Click);
             // 
-            // tcp_Code
+            // btn_SearchingTaskProgress
             // 
-            this.tcp_Code.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tcp_Code.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tcp_Code.Controls.Add(this.txtb_Code);
-            this.tcp_Code.Controls.Add(this.lb_Code);
-            this.tcp_Code.Controls.Add(this.btn_SearchingCode);
-            this.tcp_Code.Location = new System.Drawing.Point(4, 4);
-            this.tcp_Code.Name = "tcp_Code";
-            this.tcp_Code.Padding = new System.Windows.Forms.Padding(3);
-            this.tcp_Code.Size = new System.Drawing.Size(742, 76);
-            this.tcp_Code.TabIndex = 0;
-            this.tcp_Code.Text = "CÓDIGO";
+            this.btn_SearchingTaskProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_SearchingTaskProgress.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_SearchingTaskProgress.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_SearchingTaskProgress.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_SearchingTaskProgress.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_SearchingTaskProgress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchingTaskProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SearchingTaskProgress.Image = global::ToDo_List.Properties.Resources.Apply;
+            this.btn_SearchingTaskProgress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SearchingTaskProgress.Location = new System.Drawing.Point(560, 7);
+            this.btn_SearchingTaskProgress.Name = "btn_SearchingTaskProgress";
+            this.btn_SearchingTaskProgress.Size = new System.Drawing.Size(173, 59);
+            this.btn_SearchingTaskProgress.TabIndex = 7;
+            this.btn_SearchingTaskProgress.Text = "      PESQUISAR";
+            this.btn_SearchingTaskProgress.UseVisualStyleBackColor = false;
+            this.btn_SearchingTaskProgress.Click += new System.EventHandler(this.btn_SearchingTaskProgress_Click);
             // 
-            // txtb_Code
+            // btn_SearchingPriority
             // 
-            this.txtb_Code.BackColor = System.Drawing.Color.White;
-            this.txtb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_Code.Location = new System.Drawing.Point(89, 26);
-            this.txtb_Code.Name = "txtb_Code";
-            this.txtb_Code.Size = new System.Drawing.Size(465, 26);
-            this.txtb_Code.TabIndex = 1;
-            this.txtb_Code.WordWrap = false;
-            this.txtb_Code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtb_Code_KeyPress);
+            this.btn_SearchingPriority.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_SearchingPriority.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_SearchingPriority.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_SearchingPriority.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_SearchingPriority.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_SearchingPriority.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchingPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SearchingPriority.Image = global::ToDo_List.Properties.Resources.Apply;
+            this.btn_SearchingPriority.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SearchingPriority.Location = new System.Drawing.Point(560, 7);
+            this.btn_SearchingPriority.Name = "btn_SearchingPriority";
+            this.btn_SearchingPriority.Size = new System.Drawing.Size(173, 59);
+            this.btn_SearchingPriority.TabIndex = 9;
+            this.btn_SearchingPriority.Text = "      PESQUISAR";
+            this.btn_SearchingPriority.UseVisualStyleBackColor = false;
+            this.btn_SearchingPriority.Click += new System.EventHandler(this.btn_SearchingPriority_Click);
             // 
-            // lb_Code
+            // btn_SearchingDescription
             // 
-            this.lb_Code.AutoSize = true;
-            this.lb_Code.BackColor = System.Drawing.Color.Transparent;
-            this.lb_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Code.Location = new System.Drawing.Point(2, 30);
-            this.lb_Code.Name = "lb_Code";
-            this.lb_Code.Size = new System.Drawing.Size(85, 18);
-            this.lb_Code.TabIndex = 52;
-            this.lb_Code.Text = "CÓDIGO :";
-            // 
-            // btn_SearchingCode
-            // 
-            this.btn_SearchingCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_SearchingCode.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_SearchingCode.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_SearchingCode.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn_SearchingCode.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_SearchingCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SearchingCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SearchingCode.Image = global::ToDo_List.Properties.Resources.Apply;
-            this.btn_SearchingCode.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SearchingCode.Location = new System.Drawing.Point(560, 7);
-            this.btn_SearchingCode.Name = "btn_SearchingCode";
-            this.btn_SearchingCode.Size = new System.Drawing.Size(173, 59);
-            this.btn_SearchingCode.TabIndex = 2;
-            this.btn_SearchingCode.Text = "      PESQUISAR";
-            this.btn_SearchingCode.UseVisualStyleBackColor = false;
-            this.btn_SearchingCode.Click += new System.EventHandler(this.btn_SearchingCode_Click);
-            // 
-            // tc_Search
-            // 
-            this.tc_Search.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tc_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tc_Search.Controls.Add(this.tcp_Code);
-            this.tc_Search.Controls.Add(this.tcp_DatesTask);
-            this.tc_Search.Controls.Add(this.tcp_TaskProgress);
-            this.tc_Search.Controls.Add(this.tcp_Priority);
-            this.tc_Search.Controls.Add(this.tcp_Description);
-            this.tc_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.tc_Search.HotTrack = true;
-            this.tc_Search.Location = new System.Drawing.Point(-1, 1);
-            this.tc_Search.Name = "tc_Search";
-            this.tc_Search.SelectedIndex = 0;
-            this.tc_Search.Size = new System.Drawing.Size(750, 105);
-            this.tc_Search.TabIndex = 17;
-            this.tc_Search.TabStop = false;
-            this.tc_Search.SelectedIndexChanged += new System.EventHandler(this.tc_Search_SelectedIndexChanged);
+            this.btn_SearchingDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_SearchingDescription.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_SearchingDescription.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_SearchingDescription.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_SearchingDescription.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_SearchingDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchingDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SearchingDescription.Image = global::ToDo_List.Properties.Resources.Apply;
+            this.btn_SearchingDescription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SearchingDescription.Location = new System.Drawing.Point(560, 7);
+            this.btn_SearchingDescription.Name = "btn_SearchingDescription";
+            this.btn_SearchingDescription.Size = new System.Drawing.Size(173, 59);
+            this.btn_SearchingDescription.TabIndex = 11;
+            this.btn_SearchingDescription.Text = "      PESQUISAR";
+            this.btn_SearchingDescription.UseVisualStyleBackColor = false;
+            this.btn_SearchingDescription.Click += new System.EventHandler(this.btn_SearchingDescription_Click);
             // 
             // Form_SearchingTask
             // 
@@ -491,6 +492,7 @@
             this.ClientSize = new System.Drawing.Size(746, 108);
             this.Controls.Add(this.mc_Calender);
             this.Controls.Add(this.tc_Search);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_SearchingTask";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
