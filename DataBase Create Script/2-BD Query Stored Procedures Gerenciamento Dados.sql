@@ -4,14 +4,14 @@ USE ToDoList;
 -- TASK -------------------------------------------------------------------------------------------------------------------------------------------------------------
 DELIMITER $$
 CREATE PROCEDURE sp_ManageTask(
-	IN var_operation CHAR(9), -- CADASTRO, ALTERACAO, REMOCAO
+	IN var_operation CHAR(9), -- CADASTRO, ALTERACAO, REMOCAO, CONCLUIDO, CANCELADO
     IN var_codeTask INT,
-    IN var_priority VARCHAR(5), -- Alta ou Baixa
+    IN var_priority VARCHAR(5), -- ALTA ou BAIXA
     IN var_descriptionTask VARCHAR(50),
     IN var_detailsTask VARCHAR(150),
     IN var_initial_date DATETIME,
     IN var_final_date DATETIME,
-    IN var_task_progress VARCHAR(10) -- Esperando, Realizando, Concluido ou Cancelado. (Obs: pode haver um Removido, para não deletar por definitivo a Task).
+    IN var_task_progress VARCHAR(10) -- ESPERANDO, REALIZANDO, CONCLUIDO ou CANCELADO. (Obs: pode haver um Removido, para não deletar por definitivo a Task).
 )
 BEGIN
 	
@@ -33,7 +33,7 @@ BEGIN
 	
     ELSE
         
-        IF ( (var_operation = 'CADASTRO') OR (var_operation = 'ALTERACAO') OR (var_operation = 'REMOCAO') ) THEN
+        IF ( (var_operation = 'CADASTRO') OR (var_operation = 'ALTERACAO') OR (var_operation = 'REMOCAO') OR (var_operation = 'CONCLUIDO') OR (var_operation = 'CANCELADO') ) THEN
         
 -- -----CADASTRO ------------------------------------------------------------------------------------------------------------------------------------------------
 			IF (var_operation = 'CADASTRO') THEN
@@ -59,7 +59,7 @@ BEGIN
 				END IF;
                             
 -- -----ALTERAÇÃO ------------------------------------------------------------------------------------------------------------------------------------------------
-			ELSEIF ( (var_operation = 'ALTERACAO') ) THEN
+			ELSEIF (var_operation = 'ALTERACAO') THEN
 				
                 IF( var_codeTask > 0 ) THEN
 					
@@ -113,7 +113,39 @@ BEGIN
                 ELSE
 					SELECT 'A operação requisitada não pode ser realizada pois o Código informado não é válido.' AS 'ALERTA';
 				END IF;
-		
+			
+-- -----CONCLUIDO ------------------------------------------------------------------------------------------------------------------------------------------------
+			ELSEIF ( (var_operation = 'CONCLUIDO') OR (var_operation = 'CANCELADO')) THEN
+				
+                IF( var_codeTask > 0 ) THEN
+                    
+                    START TRANSACTION;	-- Inicia as transações que receberam rollback caso haja algum erro que prejudique a sintax.
+                    
+                    UPDATE tbl_Task
+                    SET
+                    codeTask = var_codeTask,
+                    priority = var_priority,
+                    descriptionTask = var_descriptionTask,
+                    detailsTask = var_detailsTask,
+                    initial_date = var_initial_date,
+                    final_date = var_final_date,
+                    task_progress = var_operation
+                    WHERE
+                    codeTask = var_codeTask;
+                    
+                    -- Se o processo foi um sucesso, a variavel var_commit_control estará TRUE e poderá realizar o commit;
+                    IF ( var_commit_control ) THEN
+						COMMIT;
+                        SELECT var_codeTask AS 'SUCESSO';
+					ELSE
+						ROLLBACK;
+                        SELECT 'Erro na transação de dados, operação não pode ser realizada.' AS 'ALERTA';
+					END IF;
+				
+                ELSE
+					SELECT 'A operação requisitada não pode ser realizada pois o Código informado não é válido.' AS 'ALERTA';
+				END IF;
+                
 -- -----CASO NÃO TENHA INSERIDO NENHUMA OPERAÇÃO ----------------------------------------------------------------------------------------------------------------
 			ELSE
 				SELECT CONCAT('A operação ( ', IFNULL(var_operation, 'NULL'), ' ) não é VÁLIDA.') AS 'ALERTA';

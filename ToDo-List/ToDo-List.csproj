@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Loading.Designer.cs">
+      <DependentUpon>Form_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SearchingTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SearchingTask.Designer.cs">
+      <DependentUpon>Form_SearchingTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TodoList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_TodoList.Designer.cs">
       <DependentUpon>Form_TodoList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage_DefaultSystemMessages.cs" />
+    <Compile Include="Manage_LoadingScreen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared_FormFunctions.cs" />
+    <EmbeddedResource Include="Form_Loading.resx">
+      <DependentUpon>Form_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SearchingTask.resx">
+      <DependentUpon>Form_SearchingTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_TodoList.resx">
       <DependentUpon>Form_TodoList.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +133,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Processing_Layer\Processing_Layer.csproj">
+      <Project>{C081B305-1BC1-499E-897B-3ED50AFF5007}</Project>
+      <Name>Processing_Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransferObject_Layer\TransferObject_Layer.csproj">
+      <Project>{E5E02B7A-D0AC-4443-9F6E-8CABED205E03}</Project>
+      <Name>TransferObject_Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading GIF 3.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

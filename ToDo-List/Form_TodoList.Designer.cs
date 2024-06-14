@@ -28,23 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_First = new System.Windows.Forms.TabControl();
             this.tbp_First_TaskList = new System.Windows.Forms.TabPage();
-            this.gb_ListagemGeral = new System.Windows.Forms.GroupBox();
+            this.gb_MainList = new System.Windows.Forms.GroupBox();
             this.dgv_Tasks = new System.Windows.Forms.DataGridView();
+            this.colCodeTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPriorityTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInitialDateTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescriptionTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFinalDateTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTaskProgress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbp_Fist_TaskData = new System.Windows.Forms.TabPage();
             this.tbc_Second = new System.Windows.Forms.TabControl();
             this.tbp_Second_GeneralData = new System.Windows.Forms.TabPage();
             this.gb_GeneralData = new System.Windows.Forms.GroupBox();
+            this.cb_Priority = new System.Windows.Forms.ComboBox();
             this.lb_Priority = new System.Windows.Forms.Label();
             this.lb_TaskProgress = new System.Windows.Forms.Label();
             this.btn_CloseCalender_InitialDate = new System.Windows.Forms.Button();
@@ -62,8 +69,8 @@
             this.lb_MandatoryFilling_2 = new System.Windows.Forms.Label();
             this.btn_OpenCalender_FinalDate = new System.Windows.Forms.Button();
             this.txtb_Description = new System.Windows.Forms.TextBox();
-            this.txtb_DatailsTask = new System.Windows.Forms.TextBox();
-            this.lb_DatailsTask = new System.Windows.Forms.Label();
+            this.txtb_DetailsTask = new System.Windows.Forms.TextBox();
+            this.lb_DetailsTask = new System.Windows.Forms.Label();
             this.mtxtb_FinalDate = new System.Windows.Forms.MaskedTextBox();
             this.txtb_CodeTask = new System.Windows.Forms.TextBox();
             this.lb_CodeTask = new System.Windows.Forms.Label();
@@ -81,16 +88,9 @@
             this.btn_DeleteTask = new System.Windows.Forms.Button();
             this.btn_AlterTask = new System.Windows.Forms.Button();
             this.btn_CreateTask = new System.Windows.Forms.Button();
-            this.colCodeTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPriorityTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colInitialDateTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescriptionTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFinalDateTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTaskProgress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cb_Priority = new System.Windows.Forms.ComboBox();
             this.tbc_First.SuspendLayout();
             this.tbp_First_TaskList.SuspendLayout();
-            this.gb_ListagemGeral.SuspendLayout();
+            this.gb_MainList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Tasks)).BeginInit();
             this.tbp_Fist_TaskData.SuspendLayout();
             this.tbc_Second.SuspendLayout();
@@ -119,7 +119,7 @@
             // 
             this.tbp_First_TaskList.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tbp_First_TaskList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tbp_First_TaskList.Controls.Add(this.gb_ListagemGeral);
+            this.tbp_First_TaskList.Controls.Add(this.gb_MainList);
             this.tbp_First_TaskList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbp_First_TaskList.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tbp_First_TaskList.Location = new System.Drawing.Point(4, 38);
@@ -129,18 +129,18 @@
             this.tbp_First_TaskList.TabIndex = 0;
             this.tbp_First_TaskList.Text = "LISTA DE TAREFAS";
             // 
-            // gb_ListagemGeral
+            // gb_MainList
             // 
-            this.gb_ListagemGeral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gb_MainList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gb_ListagemGeral.BackColor = System.Drawing.Color.Transparent;
-            this.gb_ListagemGeral.Controls.Add(this.dgv_Tasks);
-            this.gb_ListagemGeral.Location = new System.Drawing.Point(-2, -2);
-            this.gb_ListagemGeral.Name = "gb_ListagemGeral";
-            this.gb_ListagemGeral.Size = new System.Drawing.Size(1256, 582);
-            this.gb_ListagemGeral.TabIndex = 17;
-            this.gb_ListagemGeral.TabStop = false;
+            this.gb_MainList.BackColor = System.Drawing.Color.Transparent;
+            this.gb_MainList.Controls.Add(this.dgv_Tasks);
+            this.gb_MainList.Location = new System.Drawing.Point(-2, -2);
+            this.gb_MainList.Name = "gb_MainList";
+            this.gb_MainList.Size = new System.Drawing.Size(1256, 582);
+            this.gb_MainList.TabIndex = 17;
+            this.gb_MainList.TabStop = false;
             // 
             // dgv_Tasks
             // 
@@ -152,14 +152,14 @@
             this.dgv_Tasks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Tasks.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_Tasks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Tasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Tasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Tasks.ColumnHeadersHeight = 30;
             this.dgv_Tasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodeTask,
@@ -174,22 +174,86 @@
             this.dgv_Tasks.Name = "dgv_Tasks";
             this.dgv_Tasks.ReadOnly = true;
             this.dgv_Tasks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_Tasks.RowHeadersVisible = false;
-            dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
-            this.dgv_Tasks.RowsDefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            this.dgv_Tasks.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_Tasks.RowTemplate.ReadOnly = true;
             this.dgv_Tasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Tasks.Size = new System.Drawing.Size(1256, 585);
             this.dgv_Tasks.TabIndex = 17;
             this.dgv_Tasks.TabStop = false;
+            this.dgv_Tasks.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgv_Tasks_RowsAdded);
+            this.dgv_Tasks.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dgv_Tasks_KeyUp);
+            this.dgv_Tasks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_Tasks_MouseClick);
+            this.dgv_Tasks.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_Tasks_MouseDoubleClick);
+            // 
+            // colCodeTask
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.colCodeTask.DefaultCellStyle = dataGridViewCellStyle11;
+            this.colCodeTask.HeaderText = "CÓDIGO";
+            this.colCodeTask.Name = "colCodeTask";
+            this.colCodeTask.ReadOnly = true;
+            this.colCodeTask.Width = 250;
+            // 
+            // colPriorityTask
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.colPriorityTask.DefaultCellStyle = dataGridViewCellStyle12;
+            this.colPriorityTask.HeaderText = "PRIORIDADE";
+            this.colPriorityTask.Name = "colPriorityTask";
+            this.colPriorityTask.ReadOnly = true;
+            this.colPriorityTask.Width = 200;
+            // 
+            // colInitialDateTask
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.colInitialDateTask.DefaultCellStyle = dataGridViewCellStyle13;
+            this.colInitialDateTask.HeaderText = "DATA INICIAL";
+            this.colInitialDateTask.Name = "colInitialDateTask";
+            this.colInitialDateTask.ReadOnly = true;
+            this.colInitialDateTask.Width = 250;
+            // 
+            // colDescriptionTask
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.colDescriptionTask.DefaultCellStyle = dataGridViewCellStyle14;
+            this.colDescriptionTask.HeaderText = "DESCRIÇÃO";
+            this.colDescriptionTask.Name = "colDescriptionTask";
+            this.colDescriptionTask.ReadOnly = true;
+            this.colDescriptionTask.Width = 655;
+            // 
+            // colFinalDateTask
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.colFinalDateTask.DefaultCellStyle = dataGridViewCellStyle15;
+            this.colFinalDateTask.HeaderText = "DATA FINAL";
+            this.colFinalDateTask.Name = "colFinalDateTask";
+            this.colFinalDateTask.ReadOnly = true;
+            this.colFinalDateTask.Width = 250;
+            // 
+            // colTaskProgress
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.colTaskProgress.DefaultCellStyle = dataGridViewCellStyle16;
+            this.colTaskProgress.HeaderText = "PROGRESSO ATUAL";
+            this.colTaskProgress.Name = "colTaskProgress";
+            this.colTaskProgress.ReadOnly = true;
+            this.colTaskProgress.Width = 300;
             // 
             // tbp_Fist_TaskData
             // 
@@ -257,8 +321,8 @@
             this.gb_GeneralData.Controls.Add(this.lb_MandatoryFilling_2);
             this.gb_GeneralData.Controls.Add(this.btn_OpenCalender_FinalDate);
             this.gb_GeneralData.Controls.Add(this.txtb_Description);
-            this.gb_GeneralData.Controls.Add(this.txtb_DatailsTask);
-            this.gb_GeneralData.Controls.Add(this.lb_DatailsTask);
+            this.gb_GeneralData.Controls.Add(this.txtb_DetailsTask);
+            this.gb_GeneralData.Controls.Add(this.lb_DetailsTask);
             this.gb_GeneralData.Controls.Add(this.mtxtb_FinalDate);
             this.gb_GeneralData.Controls.Add(this.txtb_CodeTask);
             this.gb_GeneralData.Controls.Add(this.lb_CodeTask);
@@ -274,11 +338,26 @@
             this.gb_GeneralData.TabIndex = 0;
             this.gb_GeneralData.TabStop = false;
             // 
+            // cb_Priority
+            // 
+            this.cb_Priority.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cb_Priority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Priority.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Priority.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Priority.Items.AddRange(new object[] {
+            "ALTA PRIORIDADE",
+            "BAIXA PRIORIDADE"});
+            this.cb_Priority.Location = new System.Drawing.Point(350, 147);
+            this.cb_Priority.MaxDropDownItems = 2;
+            this.cb_Priority.Name = "cb_Priority";
+            this.cb_Priority.Size = new System.Drawing.Size(180, 26);
+            this.cb_Priority.TabIndex = 177;
+            // 
             // lb_Priority
             // 
             this.lb_Priority.AutoSize = true;
             this.lb_Priority.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Priority.Location = new System.Drawing.Point(229, 155);
+            this.lb_Priority.Location = new System.Drawing.Point(229, 151);
             this.lb_Priority.Name = "lb_Priority";
             this.lb_Priority.Size = new System.Drawing.Size(119, 18);
             this.lb_Priority.TabIndex = 151;
@@ -311,6 +390,7 @@
             this.btn_CloseCalender_InitialDate.TabStop = false;
             this.btn_CloseCalender_InitialDate.UseVisualStyleBackColor = false;
             this.btn_CloseCalender_InitialDate.Visible = false;
+            this.btn_CloseCalender_InitialDate.Click += new System.EventHandler(this.btn_CloseCalender_InitialDate_Click);
             // 
             // mc_Calender_InitialDate
             // 
@@ -322,6 +402,7 @@
             this.mc_Calender_InitialDate.Name = "mc_Calender_InitialDate";
             this.mc_Calender_InitialDate.TabIndex = 175;
             this.mc_Calender_InitialDate.Visible = false;
+            this.mc_Calender_InitialDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mc_Calender_InitialDate_DateSelected);
             // 
             // lb_InitialDate
             // 
@@ -359,6 +440,7 @@
             this.btn_OpenCalender_InitialDate.Size = new System.Drawing.Size(35, 35);
             this.btn_OpenCalender_InitialDate.TabIndex = 172;
             this.btn_OpenCalender_InitialDate.UseVisualStyleBackColor = false;
+            this.btn_OpenCalender_InitialDate.Click += new System.EventHandler(this.btn_OpenCalender_InitialDate_Click);
             // 
             // mtxtb_InitialDate
             // 
@@ -371,6 +453,7 @@
             this.mtxtb_InitialDate.TabIndex = 171;
             this.mtxtb_InitialDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtxtb_InitialDate.ValidatingType = typeof(System.DateTime);
+            this.mtxtb_InitialDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtb_InitialDate_KeyPress);
             // 
             // btn_CloseCalender_FinalDate
             // 
@@ -389,6 +472,7 @@
             this.btn_CloseCalender_FinalDate.TabStop = false;
             this.btn_CloseCalender_FinalDate.UseVisualStyleBackColor = false;
             this.btn_CloseCalender_FinalDate.Visible = false;
+            this.btn_CloseCalender_FinalDate.Click += new System.EventHandler(this.btn_CloseCalender_FinalDate_Click);
             // 
             // mc_Calender_FinalDate
             // 
@@ -400,13 +484,14 @@
             this.mc_Calender_FinalDate.Name = "mc_Calender_FinalDate";
             this.mc_Calender_FinalDate.TabIndex = 164;
             this.mc_Calender_FinalDate.Visible = false;
+            this.mc_Calender_FinalDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mc_Calender_FinalDate_DateSelected);
             // 
             // lb_Description
             // 
             this.lb_Description.AutoSize = true;
             this.lb_Description.BackColor = System.Drawing.Color.Transparent;
             this.lb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Description.Location = new System.Drawing.Point(227, 201);
+            this.lb_Description.Location = new System.Drawing.Point(227, 197);
             this.lb_Description.Name = "lb_Description";
             this.lb_Description.Size = new System.Drawing.Size(115, 18);
             this.lb_Description.TabIndex = 125;
@@ -428,7 +513,7 @@
             this.lb_MandatoryFilling_4.AutoSize = true;
             this.lb_MandatoryFilling_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_MandatoryFilling_4.ForeColor = System.Drawing.Color.IndianRed;
-            this.lb_MandatoryFilling_4.Location = new System.Drawing.Point(213, 197);
+            this.lb_MandatoryFilling_4.Location = new System.Drawing.Point(213, 193);
             this.lb_MandatoryFilling_4.Name = "lb_MandatoryFilling_4";
             this.lb_MandatoryFilling_4.Size = new System.Drawing.Size(21, 25);
             this.lb_MandatoryFilling_4.TabIndex = 170;
@@ -441,7 +526,7 @@
             this.lb_MandatoryFilling_3.BackColor = System.Drawing.Color.Transparent;
             this.lb_MandatoryFilling_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_MandatoryFilling_3.ForeColor = System.Drawing.Color.IndianRed;
-            this.lb_MandatoryFilling_3.Location = new System.Drawing.Point(216, 151);
+            this.lb_MandatoryFilling_3.Location = new System.Drawing.Point(216, 147);
             this.lb_MandatoryFilling_3.Name = "lb_MandatoryFilling_3";
             this.lb_MandatoryFilling_3.Size = new System.Drawing.Size(21, 25);
             this.lb_MandatoryFilling_3.TabIndex = 169;
@@ -474,40 +559,43 @@
             this.btn_OpenCalender_FinalDate.Size = new System.Drawing.Size(35, 35);
             this.btn_OpenCalender_FinalDate.TabIndex = 4;
             this.btn_OpenCalender_FinalDate.UseVisualStyleBackColor = false;
+            this.btn_OpenCalender_FinalDate.Click += new System.EventHandler(this.btn_OpenCalender_FinalDate_Click);
             // 
             // txtb_Description
             // 
             this.txtb_Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_Description.Location = new System.Drawing.Point(344, 197);
+            this.txtb_Description.Location = new System.Drawing.Point(344, 193);
             this.txtb_Description.MaxLength = 50;
             this.txtb_Description.Name = "txtb_Description";
             this.txtb_Description.Size = new System.Drawing.Size(726, 26);
             this.txtb_Description.TabIndex = 126;
             this.txtb_Description.WordWrap = false;
+            this.txtb_Description.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtb_Description_KeyPress);
             // 
-            // txtb_DatailsTask
+            // txtb_DetailsTask
             // 
-            this.txtb_DatailsTask.AcceptsTab = true;
-            this.txtb_DatailsTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_DatailsTask.Location = new System.Drawing.Point(344, 244);
-            this.txtb_DatailsTask.MaxLength = 150;
-            this.txtb_DatailsTask.Multiline = true;
-            this.txtb_DatailsTask.Name = "txtb_DatailsTask";
-            this.txtb_DatailsTask.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtb_DatailsTask.Size = new System.Drawing.Size(726, 90);
-            this.txtb_DatailsTask.TabIndex = 10;
+            this.txtb_DetailsTask.AcceptsTab = true;
+            this.txtb_DetailsTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtb_DetailsTask.Location = new System.Drawing.Point(344, 240);
+            this.txtb_DetailsTask.MaxLength = 150;
+            this.txtb_DetailsTask.Multiline = true;
+            this.txtb_DetailsTask.Name = "txtb_DetailsTask";
+            this.txtb_DetailsTask.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtb_DetailsTask.Size = new System.Drawing.Size(726, 90);
+            this.txtb_DetailsTask.TabIndex = 10;
+            this.txtb_DetailsTask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtb_DetailsTask_KeyPress);
             // 
-            // lb_DatailsTask
+            // lb_DetailsTask
             // 
-            this.lb_DatailsTask.AutoSize = true;
-            this.lb_DatailsTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DatailsTask.Location = new System.Drawing.Point(170, 247);
-            this.lb_DatailsTask.Name = "lb_DatailsTask";
-            this.lb_DatailsTask.Size = new System.Drawing.Size(172, 18);
-            this.lb_DatailsTask.TabIndex = 149;
-            this.lb_DatailsTask.Text = "DETALHES TAREFA :";
+            this.lb_DetailsTask.AutoSize = true;
+            this.lb_DetailsTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_DetailsTask.Location = new System.Drawing.Point(170, 243);
+            this.lb_DetailsTask.Name = "lb_DetailsTask";
+            this.lb_DetailsTask.Size = new System.Drawing.Size(172, 18);
+            this.lb_DetailsTask.TabIndex = 149;
+            this.lb_DetailsTask.Text = "DETALHES TAREFA :";
             // 
             // mtxtb_FinalDate
             // 
@@ -520,6 +608,7 @@
             this.mtxtb_FinalDate.TabIndex = 3;
             this.mtxtb_FinalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtxtb_FinalDate.ValidatingType = typeof(System.DateTime);
+            this.mtxtb_FinalDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtxtb_FinalDate_KeyPress);
             // 
             // txtb_CodeTask
             // 
@@ -602,6 +691,7 @@
             this.btn_Canceled_Data.TabIndex = 18;
             this.btn_Canceled_Data.Text = "    CANCELAR";
             this.btn_Canceled_Data.UseVisualStyleBackColor = false;
+            this.btn_Canceled_Data.Click += new System.EventHandler(this.btn_Canceled_Data_Click);
             // 
             // btn_Confirmed_Data
             // 
@@ -620,6 +710,7 @@
             this.btn_Confirmed_Data.TabIndex = 17;
             this.btn_Confirmed_Data.Text = "     CONFIRMAR";
             this.btn_Confirmed_Data.UseVisualStyleBackColor = false;
+            this.btn_Confirmed_Data.Click += new System.EventHandler(this.btn_Confirmed_Data_Click);
             // 
             // lb_WindowLogo
             // 
@@ -646,12 +737,13 @@
             this.btn_CancelTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CancelTask.Image = global::ToDo_List.Properties.Resources.Bad_mark;
             this.btn_CancelTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CancelTask.Location = new System.Drawing.Point(568, 12);
+            this.btn_CancelTask.Location = new System.Drawing.Point(568, 11);
             this.btn_CancelTask.Name = "btn_CancelTask";
             this.btn_CancelTask.Size = new System.Drawing.Size(135, 46);
             this.btn_CancelTask.TabIndex = 183;
             this.btn_CancelTask.Text = "      ENCERRAR";
             this.btn_CancelTask.UseVisualStyleBackColor = false;
+            this.btn_CancelTask.Click += new System.EventHandler(this.btn_CancelTask_Click);
             // 
             // btn_CompleteTask
             // 
@@ -663,12 +755,13 @@
             this.btn_CompleteTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CompleteTask.Image = global::ToDo_List.Properties.Resources.Good_mark;
             this.btn_CompleteTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CompleteTask.Location = new System.Drawing.Point(427, 12);
+            this.btn_CompleteTask.Location = new System.Drawing.Point(427, 11);
             this.btn_CompleteTask.Name = "btn_CompleteTask";
             this.btn_CompleteTask.Size = new System.Drawing.Size(135, 46);
             this.btn_CompleteTask.TabIndex = 182;
             this.btn_CompleteTask.Text = "      COMPLETAR";
             this.btn_CompleteTask.UseVisualStyleBackColor = false;
+            this.btn_CompleteTask.Click += new System.EventHandler(this.btn_CompleteTask_Click);
             // 
             // btn_SearchTask
             // 
@@ -687,6 +780,7 @@
             this.btn_SearchTask.TabIndex = 180;
             this.btn_SearchTask.Text = "      PESQUISAR";
             this.btn_SearchTask.UseVisualStyleBackColor = false;
+            this.btn_SearchTask.Click += new System.EventHandler(this.btn_SearchTask_Click);
             // 
             // btn_ForwardGrid
             // 
@@ -704,6 +798,7 @@
             this.btn_ForwardGrid.Size = new System.Drawing.Size(61, 46);
             this.btn_ForwardGrid.TabIndex = 179;
             this.btn_ForwardGrid.UseVisualStyleBackColor = false;
+            this.btn_ForwardGrid.Click += new System.EventHandler(this.btn_ForwardGrid_Click);
             // 
             // btn_BackGrid
             // 
@@ -721,6 +816,7 @@
             this.btn_BackGrid.Size = new System.Drawing.Size(61, 46);
             this.btn_BackGrid.TabIndex = 178;
             this.btn_BackGrid.UseVisualStyleBackColor = false;
+            this.btn_BackGrid.Click += new System.EventHandler(this.btn_BackGrid_Click);
             // 
             // btn_DeleteTask
             // 
@@ -738,6 +834,7 @@
             this.btn_DeleteTask.TabIndex = 177;
             this.btn_DeleteTask.Text = "      DELETAR";
             this.btn_DeleteTask.UseVisualStyleBackColor = false;
+            this.btn_DeleteTask.Click += new System.EventHandler(this.btn_DeleteTask_Click);
             // 
             // btn_AlterTask
             // 
@@ -755,6 +852,7 @@
             this.btn_AlterTask.TabIndex = 176;
             this.btn_AlterTask.Text = "      ALTERAR";
             this.btn_AlterTask.UseVisualStyleBackColor = false;
+            this.btn_AlterTask.Click += new System.EventHandler(this.btn_AlterTask_Click);
             // 
             // btn_CreateTask
             // 
@@ -772,81 +870,7 @@
             this.btn_CreateTask.TabIndex = 175;
             this.btn_CreateTask.Text = "      CADASTRAR";
             this.btn_CreateTask.UseVisualStyleBackColor = false;
-            // 
-            // colCodeTask
-            // 
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.Black;
-            this.colCodeTask.DefaultCellStyle = dataGridViewCellStyle56;
-            this.colCodeTask.HeaderText = "CÓDIGO";
-            this.colCodeTask.Name = "colCodeTask";
-            this.colCodeTask.ReadOnly = true;
-            this.colCodeTask.Width = 250;
-            // 
-            // colPriorityTask
-            // 
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle57.ForeColor = System.Drawing.Color.Black;
-            this.colPriorityTask.DefaultCellStyle = dataGridViewCellStyle57;
-            this.colPriorityTask.HeaderText = "PRIORIDADE";
-            this.colPriorityTask.Name = "colPriorityTask";
-            this.colPriorityTask.ReadOnly = true;
-            this.colPriorityTask.Width = 200;
-            // 
-            // colInitialDateTask
-            // 
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Black;
-            this.colInitialDateTask.DefaultCellStyle = dataGridViewCellStyle58;
-            this.colInitialDateTask.HeaderText = "DATA INICIAL";
-            this.colInitialDateTask.Name = "colInitialDateTask";
-            this.colInitialDateTask.ReadOnly = true;
-            this.colInitialDateTask.Width = 250;
-            // 
-            // colDescriptionTask
-            // 
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.Black;
-            this.colDescriptionTask.DefaultCellStyle = dataGridViewCellStyle59;
-            this.colDescriptionTask.HeaderText = "DESCRIÇÃO";
-            this.colDescriptionTask.Name = "colDescriptionTask";
-            this.colDescriptionTask.ReadOnly = true;
-            this.colDescriptionTask.Width = 655;
-            // 
-            // colFinalDateTask
-            // 
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle60.ForeColor = System.Drawing.Color.Black;
-            this.colFinalDateTask.DefaultCellStyle = dataGridViewCellStyle60;
-            this.colFinalDateTask.HeaderText = "DATA FINAL";
-            this.colFinalDateTask.Name = "colFinalDateTask";
-            this.colFinalDateTask.ReadOnly = true;
-            this.colFinalDateTask.Width = 250;
-            // 
-            // colTaskProgress
-            // 
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle61.ForeColor = System.Drawing.Color.Black;
-            this.colTaskProgress.DefaultCellStyle = dataGridViewCellStyle61;
-            this.colTaskProgress.HeaderText = "PROGRESSO ATUAL";
-            this.colTaskProgress.Name = "colTaskProgress";
-            this.colTaskProgress.ReadOnly = true;
-            this.colTaskProgress.Width = 300;
-            // 
-            // cb_Priority
-            // 
-            this.cb_Priority.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cb_Priority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Priority.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Priority.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Priority.Items.AddRange(new object[] {
-            "ALTA PRIORIDADE",
-            "BAIXA PRIORIDADE"});
-            this.cb_Priority.Location = new System.Drawing.Point(350, 151);
-            this.cb_Priority.MaxDropDownItems = 2;
-            this.cb_Priority.Name = "cb_Priority";
-            this.cb_Priority.Size = new System.Drawing.Size(180, 26);
-            this.cb_Priority.TabIndex = 177;
+            this.btn_CreateTask.Click += new System.EventHandler(this.btn_CreateTask_Click);
             // 
             // Form_TodoList
             // 
@@ -867,10 +891,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ToDo LIST";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_TodoList_FormClosing);
             this.Load += new System.EventHandler(this.Form_TodoList_Load);
             this.tbc_First.ResumeLayout(false);
             this.tbp_First_TaskList.ResumeLayout(false);
-            this.gb_ListagemGeral.ResumeLayout(false);
+            this.gb_MainList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Tasks)).EndInit();
             this.tbp_Fist_TaskData.ResumeLayout(false);
             this.tbc_Second.ResumeLayout(false);
@@ -890,7 +915,7 @@
         private System.Windows.Forms.Button btn_CreateTask;
         private System.Windows.Forms.TabControl tbc_First;
         private System.Windows.Forms.TabPage tbp_First_TaskList;
-        private System.Windows.Forms.GroupBox gb_ListagemGeral;
+        private System.Windows.Forms.GroupBox gb_MainList;
         private System.Windows.Forms.DataGridView dgv_Tasks;
         private System.Windows.Forms.TabPage tbp_Fist_TaskData;
         private System.Windows.Forms.TabControl tbc_Second;
@@ -906,8 +931,8 @@
         private System.Windows.Forms.Button btn_OpenCalender_FinalDate;
         private System.Windows.Forms.TextBox txtb_Description;
         private System.Windows.Forms.Label lb_Priority;
-        private System.Windows.Forms.TextBox txtb_DatailsTask;
-        private System.Windows.Forms.Label lb_DatailsTask;
+        private System.Windows.Forms.TextBox txtb_DetailsTask;
+        private System.Windows.Forms.Label lb_DetailsTask;
         private System.Windows.Forms.MaskedTextBox mtxtb_FinalDate;
         private System.Windows.Forms.TextBox txtb_CodeTask;
         private System.Windows.Forms.Label lb_CodeTask;

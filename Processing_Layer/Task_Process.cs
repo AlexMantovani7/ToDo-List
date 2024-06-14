@@ -15,7 +15,7 @@ namespace Processing_Layer
             {
                 acessoDados.CleanParameter();
 
-                acessoDados.AddParameter("@var_operation", operation);
+                acessoDados.AddParameter("@var_operation", operation); // CADASTRO, ALTERACAO, REMOCAO, CONCLUIDO, CANCELADO
 
                 acessoDados.AddParameter("@var_codeTask", task_Object.code);
                 acessoDados.AddParameter("@var_priority", task_Object.priority);
